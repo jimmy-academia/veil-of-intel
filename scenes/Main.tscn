@@ -3,20 +3,21 @@
 [ext_resource type="Script" uid="uid://b7555p3n17ath" path="res://scripts/game_controller.gd" id="1_game_controller"]
 [ext_resource type="Script" uid="uid://bv8myy7sd01wn" path="res://scripts/plan_draw_layer.gd" id="2_plan_draw_layer"]
 [ext_resource type="Script" uid="uid://dand41580usae" path="res://scripts/intel_visualizer.gd" id="3_intel_visualizer"]
-[ext_resource type="Texture2D" uid="uid://dsx0iwxt6uw1h" path="res://icon.svg" id="4_nxtc6"]
+[ext_resource type="Texture2D" uid="uid://q8j15fd8scg" path="res://assets/maps/three_kingdoms_map_base.png" id="4_nxtc6"]
 [ext_resource type="PackedScene" path="res://scenes/Messenger.tscn" id="5_messenger_scene"]
 [ext_resource type="PackedScene" path="res://scenes/PulseEffect.tscn" id="6_pulse_scene"]
 [ext_resource type="PackedScene" path="res://ui/OrderPanel.tscn" id="7_order_panel_scene"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_game_controller")
-hq_node = NodePath("MapRoot/HQ")
 pulse_effect_scene = ExtResource("6_pulse_scene")
 messenger_scene = ExtResource("5_messenger_scene")
 
 [node name="MapRoot" type="Node2D" parent="."]
 
 [node name="Terrain" type="Sprite2D" parent="MapRoot"]
+position = Vector2(-48, -94.5)
+scale = Vector2(0.965368, 0.89772725)
 texture = ExtResource("4_nxtc6")
 
 [node name="Messengers" type="Node2D" parent="MapRoot"]
